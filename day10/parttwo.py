@@ -1,3 +1,5 @@
+# I changed like 5 lines between my p1 and p2 and didn't bother making a new file.
+
 lines = []
 with open('day10/input.txt') as file:
     lines = file.readlines()
@@ -9,17 +11,17 @@ completion_strings = []
 
 for line in lines:
     tokens = list(line.strip()) 
-    queue = []
+    stack = []
     for t in tokens:
         if t in db.keys():
-            queue.append(t)
+            stack.append(t)
         else:
-            if not t == db[queue.pop(len(queue) - 1)]:
+            if not t == db[stack.pop(len(stack) - 1)]:
                 break
     else:
-        queue.reverse()
+        stack.reverse()
         score = 0 
-        for c in queue:
+        for c in stack:
             score *= 5
             score += values[db[c]]  
         scores.append(score)
