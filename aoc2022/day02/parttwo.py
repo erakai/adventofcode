@@ -24,13 +24,6 @@ lose = {
     'C': 2
 }
 
-scores = {
-    'X': 1,
-    'Y': 2,
-    'Z': 3,
-}
-
-
 total = 0
 for line in lines:
     tokens = line.split()
