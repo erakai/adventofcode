@@ -26,9 +26,6 @@ if len(current) == 3:
 
 total = 0 
 for i in common:
-    if i.isupper():
-        total += (ord(i) - 38)
-    else:
-        total += (ord(i)- 96)
+    total += ((ord(i) - 38) if i.isupper() else (ord(i) - 96))
 
 print(total)
