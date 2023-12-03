@@ -4,7 +4,6 @@ debug = 1
 with open("test.txt" if debug else "input.txt") as file:
     lines = file.readlines()
 
-
 ans = 0
 for line in lines:
     id = int(line.split(":")[0][4:])
